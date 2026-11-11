@@ -5,7 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Download DocSigner</title>
 <meta name="description" content="Download DocSigner for Windows or Mac: sign and initial PDF and Word documents in seconds.">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 <style>
 :root {
   --blue: #2456A4; --blue-tint: #E3EBF7; --blue-text: #1B3F7A;
@@ -36,12 +39,12 @@ body {
 a { color: var(--blue-text); }
 .wrap { max-width: 780px; margin: 0 auto; padding: 0 16px; }
 
-/* header: the guides' blue fade with the gold nib and gold band */
+/* header: the guides' blue fade with the app's "ds" mark and gold band */
 header { background: linear-gradient(#223868, #4262A0); color: #fff; border-bottom: 6px solid var(--gold); }
 header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 28px; padding-bottom: 28px; }
 header h1 { margin: 0; font-size: 34px; line-height: 1.15; font-weight: 700; letter-spacing: .2px; }
 header p { margin: 6px 0 0; font-size: 17px; color: #dbe4f3; }
-.nib { width: 44px; height: 78px; flex: none; }
+.mark { width: 60px; height: 60px; flex: none; border-radius: 13.5%; box-shadow: 0 0 0 1.5px rgba(255,255,255,.35), 0 3px 10px rgba(0,0,0,.3); }
 
 main.wrap { padding-top: 32px; padding-bottom: 8px; }
 .card {
@@ -135,7 +138,7 @@ footer .links { margin-left: auto; display: flex; gap: 16px; }
 @media (max-width: 640px) {
   header h1 { font-size: 28px; }
   header p { font-size: 15px; }
-  .nib { width: 34px; height: 60px; }
+  .mark { width: 44px; height: 44px; }
   .downloads { grid-template-columns: 1fr; }
   .card { padding: 18px 16px; }
   details.card > summary { padding: 14px 16px; }
@@ -154,11 +157,7 @@ footer .links { margin-left: auto; display: flex; gap: 16px; }
       <h1>DocSigner</h1>
       <p id="latest" hidden></p>
     </div>
-    <svg class="nib" viewBox="143 55 226 400" aria-hidden="true">
-      <defs><mask id="cut"><rect x="143" y="55" width="226" height="400" fill="#fff"/>
-        <circle cx="256" cy="249.6" r="32.4" fill="#000"/><rect x="250.6" y="249.6" width="10.8" height="185.76" fill="#000"/></mask></defs>
-      <polygon points="256,55.2 368.32,249.6 256,454.8 143.68,249.6" fill="#F5C346" mask="url(#cut)"/>
-    </svg>
+    <img class="mark" src="mark-192.png" srcset="mark-96.png 1x, mark-192.png 2x, mark-384.png 4x" alt="">
   </div>
 </header>
 
